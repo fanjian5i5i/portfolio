@@ -4,6 +4,7 @@ import { reset, themes, List, ListItem, Divider, AppBar ,Toolbar, Button} from "
 import LogoIcon from '../windows-icon.png';
 import AboutIcon from '../about-icon.png';
 import FolderIcon from '../folder-icon.png';
+import ContactIcon from '../contact-icon.png';
 const ResetStyles = createGlobalStyle`
   ${reset}
 `;
@@ -24,7 +25,7 @@ function Menu() {
       <div style={{ position: 'relative', display: 'inline-block' }}>
         {open && (
           <List horizontalAlign="left" verticalAlign="top" open={open} onClick={handleClose}>
-            <ListItem>👨‍💻 Profile</ListItem>
+            
             <ListItem>
             <img  src={FolderIcon} style={{ width: 24}} alt="fireSpot"/>
                 Projects
@@ -35,8 +36,13 @@ function Menu() {
                 About
            
             </ListItem>
-            <Divider />
-            <ListItem disabled>🔙 Logout</ListItem>
+
+            
+            <ListItem>
+              <img  src={ContactIcon} style={{ width: 24}} alt="fireSpot"/>
+                Contact
+            </ListItem>
+            
           </List>
         )}
         <Button onClick={handleClick} active={open} style={{ fontWeight: 'bold' }}>
